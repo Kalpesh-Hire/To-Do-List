@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toDoContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.main-container {
+  background: azure;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 10%;
+  padding: 2rem;
+}
+.heading,
+.addItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+.heading h1 {
+  font-size: 3rem;
+}
+.addItems input,
+.fa-solid {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fa-solid {
+  margin: 5px;
+}
+.fa-solid:hover {
+  color: black;
+  cursor: pointer;
+}
+.addItems input {
+  font-size: 2rem;
+  outline: none;
+  background: none;
+  border: none;
+  border: transparent;
+  border-bottom: 2px solid;
+}
+
+.showItems {
+  margin-top: 3%;
+}
+.itemList {
+  display: flex;
+  margin: 2px;
+  padding: 3px;
+  /* background: beige; */
+  width: 30rem;
+}
+.itemList:hover {
+  background-color: #0056b3;
+  transition: 0.5s ease-in-out;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.itemList h3 {
+  margin: 0px;
+  width: 28rem;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* .btn span:hover {
+  opacity: 0;
+} */
+.btn::after {
+  content: attr(data-sm-link-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.btn:hover::after {
+  opacity: 0;
 }
