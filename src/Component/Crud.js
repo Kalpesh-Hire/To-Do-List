@@ -14,7 +14,7 @@ function getLocalItem() {
   }
 }
 
-function ToDo() {
+function Crud() {
   const [inputData, setInputData] = useState("");
   const [item, setItem] = useState(getLocalItem());
   const [toggleSubmit, setToggleSubmit] = useState(true);
@@ -74,7 +74,7 @@ function ToDo() {
       <div className="toDoContainer">
         <div className="main-container">
           <div className="heading">
-            <h1>To-Do List</h1>
+            <h1>CRUD Operation</h1>
           </div>
 
           <div className="addItems">
@@ -132,4 +132,4 @@ function ToDo() {
   );
 }
 
-export default ToDo;
+export default Crud;

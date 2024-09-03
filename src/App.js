@@ -1,10 +1,10 @@
 import React from "react";
-import ToDo from "./Component/ToDo";
+import Crud from "./Component/Crud";
 
 function App() {
   return (
     <div>
-      <ToDo />
+      <Crud />
     </div>
   );
 }
